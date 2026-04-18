@@ -743,6 +743,126 @@
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
     }
+
+    /* ============ MOBILE OPTIMIZATION ============ */
+    @media (max-width: 767px) {
+      body { font-size: 15px; }
+
+      /* Header — hide primary nav, keep mark + WA CTA */
+      .nav { grid-template-columns: 1fr auto; gap: 10px; padding: 12px 18px; }
+      nav.primary { display: none; }
+      .mark { font-size: 18px; }
+      .mark sup { display: none; }
+      .nav-cta { padding: 9px 14px; font-size: 10px; letter-spacing: 0.14em; }
+
+      /* Ribbon */
+      .ribbon { padding: 8px 0; }
+      .ribbon-track span { font-size: 10px; }
+
+      /* Bounded spacing */
+      .bounded { padding-top: 52px; padding-bottom: 52px; }
+      .bounded-tight { padding-top: 40px; padding-bottom: 40px; }
+      .wrap { padding: 0 20px; }
+
+      /* Section head stacks */
+      .section-head { grid-template-columns: 1fr; gap: 14px; margin-bottom: 36px; }
+      .section-head h2, .section-head h2.display { font-size: clamp(34px, 9vw, 48px); }
+
+      /* Hero */
+      .hero { padding: 40px 0 36px; }
+      .hero-label { margin-bottom: 22px; gap: 12px; }
+      .hero h1 { font-size: clamp(2.6rem, 13vw, 4.4rem); line-height: 0.95; letter-spacing: -0.025em; }
+      .hero-sub { margin-top: 22px; font-size: 15px; max-width: 46ch; }
+      .hero-ctas { margin-top: 28px; gap: 10px; }
+      .btn { padding: 14px 18px; font-size: 10.5px; width: 100%; justify-content: center; }
+
+      /* Hero aside cards — tighter */
+      .hc-title { font-size: 22px; line-height: 1.1; }
+      .hc-desc { font-size: 14px; margin-bottom: 14px; }
+
+      /* Caustic / blueprint softer on mobile for perf */
+      .caustic { opacity: 0.55; }
+      .blueprint-grid { opacity: 0.35; }
+
+      /* About */
+      .about-prose h2 { font-size: clamp(30px, 8vw, 44px); }
+      .about-prose p { font-size: 16px; }
+      .specs { gap: 6px; margin-top: 28px; }
+      .specs .num { font-size: clamp(26px, 8.5vw, 40px); }
+      .specs .lbl { font-size: 9.5px; letter-spacing: 0.08em; }
+
+      /* Services */
+      .svc { padding: 28px 22px !important; }
+      .svc h3 { font-size: 26px; margin: 16px 0 12px; }
+
+      /* Manifesto */
+      .manifesto blockquote { font-size: clamp(28px, 8.2vw, 44px); }
+      .manifesto .cite { font-size: 10px; }
+
+      /* FAQ */
+      .faq-item { grid-template-columns: auto 1fr auto; gap: 14px; padding: 22px 0; }
+      .faq-q { font-size: clamp(18px, 5.2vw, 22px); }
+      .faq-num { font-size: 10px; padding-top: 4px; }
+      .faq-toggle { width: 30px; height: 30px; flex-shrink: 0; }
+      .faq-toggle::before { width: 12px; }
+      .faq-toggle::after { height: 12px; }
+      .faq-a { grid-column: 1 / -1; margin-top: 10px; font-size: 15px; }
+
+      /* Contact */
+      .contact-copy h2 { font-size: clamp(36px, 10vw, 54px); }
+      .info-row { grid-template-columns: 1fr; gap: 6px; padding: 16px 0; }
+      .info-row dt { padding-top: 0; }
+      .info-row dd { font-size: 15.5px; }
+
+      /* Form — prevent iOS zoom on focus (needs 16px) */
+      .form-card { padding: 26px 20px; }
+      .form-card h3 { font-size: clamp(26px, 7vw, 32px); margin-bottom: 22px; }
+      .field input, .field textarea, .field select { font-size: 16px; }
+      .field label { font-size: 10.5px; }
+
+      /* Map */
+      .map iframe { height: 320px; }
+
+      /* Footer */
+      .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px 20px; }
+      .foot-brand { grid-column: 1 / -1; }
+      .foot-brand .huge { font-size: clamp(56px, 18vw, 88px); }
+      .foot-legal { flex-direction: column; gap: 12px; text-align: center; }
+
+      /* Sticky CTA pill — compact labels */
+      .sticky-cta { left: 10px; right: 10px; bottom: 10px; padding: 5px; }
+      .sticky-cta a { padding: 11px 6px; font-size: 10px; gap: 6px; letter-spacing: 0.08em; }
+
+      /* Hide decorative hero rail */
+      .hero-rail { display: none; }
+    }
+
+    /* Very small screens (≤380px) */
+    @media (max-width: 380px) {
+      .specs .num { font-size: 22px; }
+      .sticky-cta .en { display: none; }
+      .hero h1 { font-size: clamp(2.2rem, 13vw, 3.4rem); }
+      .wrap { padding: 0 16px; }
+      .nav-cta { font-size: 0; padding: 10px; }
+      .nav-cta::after { content: "WA"; font-size: 10.5px; letter-spacing: 0.14em; }
+      .nav-cta .dot { margin-right: 6px; }
+    }
+
+    /* Tablet refinements (768–1024px) */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      nav.primary ul { gap: 20px; }
+      nav.primary a { font-size: 10.5px; }
+      .hero h1 { font-size: clamp(3.4rem, 8vw, 6.2rem); }
+      .foot-grid { grid-template-columns: 2fr 1fr 1fr; }
+      .foot-col:nth-child(4) { display: none; }
+    }
+
+    /* Ensure tappable targets on touch devices */
+    @media (hover: none) and (pointer: coarse) {
+      .btn { min-height: 48px; padding-top: 14px; padding-bottom: 14px; }
+      .nav-cta, .sticky-cta a { min-height: 44px; }
+      .faq-item summary { min-height: 44px; }
+    }
   </style>
 </head>
 
