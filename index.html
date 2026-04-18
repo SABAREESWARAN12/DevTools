@@ -12,7 +12,7 @@
   <meta name="author" content="Hydromark">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://hydromark.in/">
-  <meta name="theme-color" content="#0B3D91">
+  <meta name="theme-color" content="#0A0E1A">
   <meta name="google-site-verification" content="rTX3nZxjSWASbMeChKzkSe_iR7zcacDISAimaEHMjpM">
 
   <!-- Open Graph -->
@@ -34,23 +34,10 @@
   <link rel="icon" href="./assets/img/HYDROMARK.svg">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
-  <!-- Perf hints -->
+  <!-- Fonts: Fraunces (display, variable Opsz) + Instrument Sans (body) + JetBrains Mono (mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Raleway:400,700|Montserrat:400,700&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- JSON-LD: LocalBusiness / HardwareStore -->
   <script type="application/ld+json">
@@ -76,8 +63,7 @@
     "openingHoursSpecification": [{
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-      "opens": "10:00",
-      "closes": "18:00"
+      "opens": "10:00", "closes": "18:00"
     }],
     "areaServed": ["Coimbatore","Tiruppur","Pollachi","Tamil Nadu"],
     "sameAs": []
@@ -119,348 +105,1067 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What types of hoses does Hydromark supply?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Hydromark supplies garden hoses, PVC suction hoses, braided hoses, hydraulic hoses, irrigation lines, hose reels and related fittings for home, farm and industrial use." }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you deliver across Tamil Nadu?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We dispatch the same day for Coimbatore and surrounding areas, and ship across Tamil Nadu on request." }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you offer wholesale pricing?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer wholesale pricing for dealers, farms and industrial buyers. Share your requirement on WhatsApp for a quote." }
-      },
-      {
-        "@type": "Question",
-        "name": "What are your business hours?",
-        "acceptedAnswer": { "@type": "Answer", "text": "We are open Monday to Saturday, 10:00 AM to 6:00 PM." }
-      },
-      {
-        "@type": "Question",
-        "name": "How can I place an order?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp us at +91 97904 58993, or send an enquiry from the contact form on this page." }
-      }
+      { "@type": "Question", "name": "What types of hoses does Hydromark supply?", "acceptedAnswer": { "@type": "Answer", "text": "Garden hoses, PVC suction hoses, braided hoses, hydraulic hoses, irrigation lines, hose reels and related fittings for home, farm and industrial use." } },
+      { "@type": "Question", "name": "Do you deliver across Tamil Nadu?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Same-day dispatch for Coimbatore and surrounding areas; shipping across Tamil Nadu on request." } },
+      { "@type": "Question", "name": "Do you offer wholesale pricing?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — wholesale pricing for dealers, farms and industrial buyers. Share requirement on WhatsApp for a quote." } },
+      { "@type": "Question", "name": "What are your business hours?", "acceptedAnswer": { "@type": "Answer", "text": "Monday to Saturday, 10:00 AM to 6:00 PM." } },
+      { "@type": "Question", "name": "How can I place an order?", "acceptedAnswer": { "@type": "Answer", "text": "Call or WhatsApp +91 97904 58993, or use the enquiry form on this page." } }
     ]
   }
   </script>
+
+  <style>
+    /* ============================================================
+       Hydromark — Editorial Industrial Futurism (2026)
+       ============================================================ */
+    :root {
+      --ink:        #0A0E1A;   /* midnight */
+      --ink-2:      #0F1424;
+      --ink-3:      #171D30;
+      --line:       #262C44;
+      --paper:      #F4F1EA;   /* warm off-white */
+      --paper-2:    #E7E2D3;
+      --dim:        #8A93A6;
+      --cyan:       #5BE3E3;   /* water */
+      --cyan-2:     #26CFCF;
+      --brass:      #C9A557;   /* industrial luxury */
+      --brass-2:    #E0C07A;
+      --coral:      #E84C3D;   /* one sharp accent */
+      --grid:       rgba(244,241,234,0.04);
+      --vh:         100vh;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      background: var(--ink);
+      color: var(--paper);
+      font-family: "Instrument Sans", ui-sans-serif, system-ui;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      font-feature-settings: "ss01","ss02";
+    }
+    ::selection { background: var(--cyan); color: var(--ink); }
+
+    a { color: inherit; text-decoration: none; }
+    img, svg, iframe { max-width: 100%; display: block; }
+    address { font-style: normal; }
+
+    /* -------- Grain + caustic atmosphere -------- */
+    .grain {
+      position: fixed; inset: 0; pointer-events: none; z-index: 99;
+      opacity: .055; mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    }
+    .blueprint-grid {
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      background-image:
+        linear-gradient(to right, var(--grid) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+      background-size: 80px 80px;
+      mask-image: radial-gradient(ellipse at 50% 30%, black 40%, transparent 80%);
+    }
+
+    /* -------- Type scale -------- */
+    .display {
+      font-family: "Fraunces", serif;
+      font-variation-settings: "opsz" 144, "SOFT" 50, "WONK" 0;
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      line-height: 0.92;
+    }
+    .display-italic {
+      font-family: "Fraunces", serif;
+      font-style: italic;
+      font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+      letter-spacing: -0.02em;
+    }
+    .mono {
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 11px; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--dim);
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--cyan);
+    }
+    .eyebrow::before {
+      content: ""; width: 24px; height: 1px; background: var(--cyan);
+    }
+
+    /* -------- Section wrapper + corner ticks -------- */
+    section { position: relative; }
+    .wrap { width: min(100%, 1400px); margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); position: relative; z-index: 1; }
+    .bounded { padding-top: clamp(80px, 12vw, 160px); padding-bottom: clamp(80px, 12vw, 160px); }
+    .bounded-tight { padding-top: clamp(60px, 8vw, 100px); padding-bottom: clamp(60px, 8vw, 100px); }
+
+    .section-head {
+      display: grid; grid-template-columns: 1fr auto; align-items: end;
+      gap: 32px; margin-bottom: clamp(40px, 6vw, 80px);
+      padding-bottom: 24px; border-bottom: 1px solid var(--line);
+    }
+    .section-index {
+      font-family: "Fraunces", serif; font-style: italic;
+      font-variation-settings: "opsz" 144;
+      font-size: clamp(42px, 5vw, 64px);
+      color: var(--brass); line-height: 1;
+    }
+    .section-title {
+      font-family: "Fraunces", serif;
+      font-variation-settings: "opsz" 144, "SOFT" 40;
+      font-size: clamp(36px, 5vw, 68px);
+      line-height: 0.95;
+      letter-spacing: -0.025em;
+      max-width: 20ch;
+    }
+    .section-title em {
+      font-style: italic; color: var(--brass);
+      font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+    }
+    .section-meta { text-align: right; color: var(--dim); max-width: 28ch; }
+
+    /* -------- Top ribbon + header -------- */
+    .ribbon {
+      position: relative; z-index: 5;
+      border-bottom: 1px solid var(--line);
+      background: rgba(10,14,26,0.6);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      overflow: hidden;
+    }
+    .ribbon-track {
+      display: flex; gap: 48px; padding: 10px 0;
+      animation: slide 38s linear infinite;
+      white-space: nowrap;
+    }
+    .ribbon-track span { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dim); }
+    .ribbon-track b { color: var(--cyan); font-weight: 500; }
+    @keyframes slide { to { transform: translateX(-50%); } }
+
+    header.site {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(10,14,26,0.72);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      display: grid; grid-template-columns: auto 1fr auto;
+      align-items: center; gap: 24px;
+      padding: 16px clamp(20px, 4vw, 48px);
+    }
+    .mark {
+      display: flex; align-items: center; gap: 10px;
+      font-family: "Fraunces", serif; font-style: italic;
+      font-variation-settings: "opsz" 144, "SOFT" 100;
+      font-size: 22px; letter-spacing: -0.02em;
+    }
+    .mark-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--cyan); box-shadow: 0 0 0 4px rgba(91,227,227,0.15);
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .4; } }
+
+    nav.primary ul { list-style: none; display: flex; justify-content: center; gap: clamp(18px, 3vw, 36px); }
+    nav.primary a {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--dim); transition: color .25s;
+      position: relative; padding: 6px 0;
+    }
+    nav.primary a::after {
+      content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 1px;
+      background: var(--cyan); transition: right .4s cubic-bezier(.2,.8,.2,1);
+    }
+    nav.primary a:hover, nav.primary a.active { color: var(--paper); }
+    nav.primary a:hover::after, nav.primary a.active::after { right: 0; }
+
+    .nav-cta {
+      font-family: "JetBrains Mono", monospace; font-size: 11px;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 10px 16px; border: 1px solid var(--line);
+      border-radius: 999px; color: var(--paper);
+      transition: all .25s;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .nav-cta:hover { background: var(--cyan); color: var(--ink); border-color: var(--cyan); }
+    .nav-cta .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--cyan); }
+    .nav-cta:hover .dot { background: var(--ink); }
+
+    /* -------- HERO -------- */
+    .hero {
+      position: relative; padding: clamp(60px, 10vw, 140px) 0 clamp(60px, 10vw, 140px);
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+      gap: clamp(32px, 6vw, 80px); align-items: center;
+    }
+    @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+
+    .hero-label {
+      display: flex; gap: 16px; align-items: center;
+      margin-bottom: 32px;
+    }
+    .hero-label .tick {
+      width: 18px; height: 1px; background: var(--brass);
+    }
+
+    .hero h1 {
+      font-family: "Fraunces", serif;
+      font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0;
+      font-weight: 400;
+      font-size: clamp(3rem, 8.6vw, 8.2rem);
+      line-height: 0.88;
+      letter-spacing: -0.035em;
+      color: var(--paper);
+    }
+    .hero h1 .w {
+      display: inline-block; opacity: 0; transform: translateY(40%) rotate(3deg);
+      animation: rise .9s cubic-bezier(.2,.8,.2,1) forwards;
+    }
+    .hero h1 .italic {
+      font-style: italic; color: var(--brass);
+      font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+    }
+    @keyframes rise {
+      to { opacity: 1; transform: translateY(0) rotate(0); }
+    }
+    .hero h1 .w:nth-child(1) { animation-delay: .05s; }
+    .hero h1 .w:nth-child(2) { animation-delay: .18s; }
+    .hero h1 .w:nth-child(3) { animation-delay: .32s; }
+    .hero h1 .w:nth-child(4) { animation-delay: .46s; }
+    .hero h1 .w:nth-child(5) { animation-delay: .6s; }
+
+    .hero-sub {
+      margin-top: 28px; max-width: 38ch; color: var(--dim);
+      font-size: clamp(1rem, 1.3vw, 1.125rem); line-height: 1.6;
+      opacity: 0; transform: translateY(20px);
+      animation: fadein .8s ease-out .9s forwards;
+    }
+    @keyframes fadein { to { opacity: 1; transform: translateY(0); } }
+
+    .hero-ctas {
+      margin-top: 40px; display: flex; gap: 14px; flex-wrap: wrap;
+      opacity: 0; transform: translateY(20px);
+      animation: fadein .8s ease-out 1.05s forwards;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 12px;
+      padding: 16px 24px; border-radius: 2px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase;
+      transition: transform .2s, background .25s, color .25s, box-shadow .25s;
+      border: 1px solid transparent; cursor: pointer;
+    }
+    .btn-primary { background: var(--cyan); color: var(--ink); border-color: var(--cyan); }
+    .btn-primary:hover { background: var(--paper); border-color: var(--paper); transform: translateY(-2px); box-shadow: 0 14px 40px -10px rgba(91,227,227,.35); }
+    .btn-ghost { background: transparent; color: var(--paper); border-color: var(--line); }
+    .btn-ghost:hover { border-color: var(--brass); color: var(--brass); }
+    .btn svg { width: 14px; height: 14px; }
+
+    /* Hero right card stack */
+    .hero-aside {
+      position: relative; opacity: 0;
+      animation: fadein 1s ease-out 1.2s forwards;
+    }
+    .hero-card {
+      background: linear-gradient(160deg, rgba(23,29,48,0.85), rgba(15,20,36,0.85));
+      border: 1px solid var(--line);
+      padding: 32px; border-radius: 4px;
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      position: relative;
+    }
+    .hero-card + .hero-card { margin-top: 16px; }
+    .hero-card::before, .hero-card::after,
+    .hero-card > .tick-tl, .hero-card > .tick-tr {
+      content: ""; position: absolute; width: 10px; height: 10px;
+      border: 1px solid var(--brass);
+    }
+    .hero-card::before { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+    .hero-card::after  { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
+    .hero-card .tick-tl { top: -1px; right: -1px; border-left: 0; border-bottom: 0; }
+    .hero-card .tick-tr { bottom: -1px; left: -1px; border-right: 0; border-top: 0; }
+
+    .hc-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; }
+    .hc-head .mono { color: var(--dim); }
+    .hc-head .chip { background: rgba(91,227,227,0.08); color: var(--cyan); border: 1px solid rgba(91,227,227,.2); padding: 4px 10px; border-radius: 999px; font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: .15em; text-transform: uppercase; }
+    .hc-title {
+      font-family: "Fraunces", serif; font-variation-settings: "opsz" 144, "SOFT" 50;
+      font-size: 28px; line-height: 1.05; margin-bottom: 10px;
+    }
+    .hc-title em { font-style: italic; color: var(--brass); font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1; }
+    .hc-desc { color: var(--dim); font-size: 14.5px; margin-bottom: 20px; }
+    .hc-foot { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); padding-top: 16px; }
+    .hc-foot a { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--paper); display: inline-flex; align-items: center; gap: 8px; }
+    .hc-foot a:hover { color: var(--cyan); }
+    .hc-arrow { transition: transform .3s; }
+    .hc-foot a:hover .hc-arrow { transform: translateX(4px); }
+
+    /* Decorative caustic SVG */
+    .caustic {
+      position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      mask-image: radial-gradient(ellipse at 30% 60%, black 20%, transparent 70%);
+    }
+    .caustic svg { width: 100%; height: 100%; }
+
+    /* Hero meta rail */
+    .hero-rail {
+      position: absolute; right: clamp(10px, 2vw, 24px); top: 50%;
+      transform: translateY(-50%) rotate(90deg); transform-origin: right center;
+      font-family: "JetBrains Mono", monospace; font-size: 10.5px;
+      letter-spacing: 0.3em; text-transform: uppercase; color: var(--dim);
+      display: flex; gap: 24px; pointer-events: none;
+    }
+    .hero-rail span b { color: var(--brass); font-weight: 500; }
+    @media (max-width: 1100px) { .hero-rail { display: none; } }
+
+    /* -------- Marquee of categories -------- */
+    .marquee {
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+      background: var(--ink-2); padding: 22px 0; overflow: hidden;
+    }
+    .marquee-track {
+      display: flex; gap: 56px; white-space: nowrap;
+      animation: slide 42s linear infinite;
+    }
+    .marquee-track span {
+      font-family: "Fraunces", serif; font-style: italic;
+      font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+      font-size: clamp(20px, 2.2vw, 32px); color: var(--paper);
+      display: inline-flex; align-items: center; gap: 32px;
+    }
+    .marquee-track span::after {
+      content: "◆"; color: var(--brass); font-size: 14px; font-style: normal;
+    }
+
+    /* -------- ABOUT (editorial columns) -------- */
+    .about-grid {
+      display: grid; grid-template-columns: 5fr 7fr;
+      gap: clamp(32px, 5vw, 80px); align-items: start;
+    }
+    @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; } }
+    .about-visual {
+      position: relative; aspect-ratio: 4/5;
+      border-radius: 4px; overflow: hidden;
+      background:
+        radial-gradient(ellipse at 30% 20%, rgba(91,227,227,.25), transparent 60%),
+        radial-gradient(ellipse at 80% 80%, rgba(201,165,87,.2), transparent 60%),
+        linear-gradient(135deg, var(--ink-2), var(--ink-3));
+      border: 1px solid var(--line);
+    }
+    .about-visual img {
+      width: 100%; height: 100%; object-fit: cover;
+      filter: grayscale(.4) contrast(1.05) saturate(.9);
+      mix-blend-mode: luminosity; opacity: .9;
+    }
+    .about-visual .overlay {
+      position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(180deg, transparent 40%, rgba(10,14,26,0.75) 100%);
+    }
+    .about-visual .caption {
+      position: absolute; left: 20px; bottom: 20px; right: 20px;
+      display: flex; justify-content: space-between; align-items: end; gap: 16px;
+      color: var(--paper);
+    }
+    .about-visual .caption .mono { color: var(--brass); }
+
+    .about-prose h2 {
+      font-family: "Fraunces", serif;
+      font-variation-settings: "opsz" 144, "SOFT" 40;
+      font-size: clamp(32px, 4.2vw, 54px);
+      line-height: 0.98; letter-spacing: -0.025em; margin-bottom: 28px;
+    }
+    .about-prose h2 em { font-style: italic; color: var(--brass); font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1; }
+    .about-prose p { color: var(--dim); font-size: 17px; line-height: 1.65; max-width: 52ch; margin-bottom: 20px; }
+
+    .specs {
+      margin-top: 40px; border-top: 1px solid var(--line);
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+    }
+    .specs div {
+      padding: 24px 16px; border-right: 1px solid var(--line);
+    }
+    .specs div:last-child { border-right: 0; }
+    .specs .num {
+      font-family: "Fraunces", serif;
+      font-variation-settings: "opsz" 144, "SOFT" 40;
+      font-size: clamp(36px, 4vw, 56px); color: var(--paper); line-height: 1;
+    }
+    .specs .num em { font-style: italic; color: var(--brass); font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1; }
+    .specs .lbl { margin-top: 8px; color: var(--dim); font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; }
+
+    /* -------- SERVICES (interactive cards) -------- */
+    #services { background: linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%); }
+    .svc-grid {
+      display: grid; grid-template-columns: repeat(12, 1fr);
+      gap: 20px;
+    }
+    .svc {
+      position: relative; padding: 36px; min-height: 320px;
+      background: var(--ink-3); border: 1px solid var(--line);
+      border-radius: 4px; overflow: hidden; isolation: isolate;
+      transition: transform .4s cubic-bezier(.2,.8,.2,1), border-color .3s;
+    }
+    .svc:hover { transform: translateY(-6px); border-color: var(--brass); }
+    .svc::before {
+      content: ""; position: absolute; inset: 0; z-index: -1;
+      background: radial-gradient(400px circle at var(--x, 50%) var(--y, 50%), rgba(91,227,227,0.12), transparent 50%);
+      opacity: 0; transition: opacity .4s;
+    }
+    .svc:hover::before { opacity: 1; }
+    .svc .idx { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.18em; color: var(--dim); }
+    .svc h3 {
+      font-family: "Fraunces", serif; font-variation-settings: "opsz" 144, "SOFT" 40;
+      font-size: 34px; line-height: 1.05; margin: 20px 0 14px; color: var(--paper);
+      letter-spacing: -0.02em;
+    }
+    .svc h3 em { font-style: italic; color: var(--brass); font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1; }
+    .svc p { color: var(--dim); font-size: 14.5px; max-width: 34ch; }
+    .svc .icon {
+      position: absolute; bottom: 28px; right: 28px;
+      width: 52px; height: 52px; border-radius: 50%;
+      border: 1px solid var(--brass); color: var(--brass);
+      display: flex; align-items: center; justify-content: center;
+      transition: background .3s, color .3s, transform .3s;
+    }
+    .svc:hover .icon { background: var(--brass); color: var(--ink); transform: rotate(-12deg); }
+
+    /* Asymmetric spans */
+    .svc.s1 { grid-column: span 7; }
+    .svc.s2 { grid-column: span 5; }
+    .svc.s3 { grid-column: span 5; }
+    .svc.s4 { grid-column: span 7; }
+    @media (max-width: 900px) { .svc { grid-column: span 12 !important; } }
+
+    /* -------- MANIFESTO (editorial quote) -------- */
+    .manifesto {
+      padding: clamp(80px, 12vw, 160px) 0; border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(201,165,87,.08), transparent 50%),
+        radial-gradient(ellipse at 80% 50%, rgba(91,227,227,.08), transparent 50%),
+        var(--ink);
+    }
+    .manifesto blockquote {
+      font-family: "Fraunces", serif;
+      font-variation-settings: "opsz" 144, "SOFT" 60, "WONK" 0;
+      font-weight: 300;
+      font-size: clamp(32px, 4.6vw, 72px);
+      line-height: 1.02; letter-spacing: -0.025em;
+      max-width: 22ch; color: var(--paper);
+    }
+    .manifesto blockquote em { font-style: italic; color: var(--brass); font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1; }
+    .manifesto .cite {
+      margin-top: 28px; display: flex; align-items: center; gap: 12px;
+      font-family: "JetBrains Mono", monospace; font-size: 11px;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--dim);
+    }
+    .manifesto .cite .line { width: 36px; height: 1px; background: var(--brass); }
+
+    /* -------- FAQ -------- */
+    .faq-list { display: grid; gap: 0; border-top: 1px solid var(--line); }
+    .faq-item {
+      border-bottom: 1px solid var(--line); padding: 28px 0; cursor: pointer;
+      display: grid; grid-template-columns: auto 1fr auto; gap: 24px;
+      align-items: start; transition: padding .3s;
+    }
+    .faq-item[open] { padding-bottom: 32px; }
+    .faq-item > summary { list-style: none; display: contents; cursor: pointer; }
+    .faq-item > summary::-webkit-details-marker { display: none; }
+    .faq-num {
+      font-family: "JetBrains Mono", monospace; font-size: 11px;
+      letter-spacing: 0.18em; color: var(--dim); padding-top: 6px;
+    }
+    .faq-q {
+      font-family: "Fraunces", serif; font-variation-settings: "opsz" 144, "SOFT" 40;
+      font-size: clamp(22px, 2.6vw, 32px); color: var(--paper);
+      line-height: 1.15; letter-spacing: -0.01em;
+    }
+    .faq-toggle {
+      width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--dim); transition: all .3s;
+      position: relative; flex-shrink: 0;
+    }
+    .faq-toggle::before, .faq-toggle::after {
+      content: ""; position: absolute; background: currentColor; transition: transform .3s;
+    }
+    .faq-toggle::before { width: 14px; height: 1px; }
+    .faq-toggle::after { width: 1px; height: 14px; }
+    .faq-item[open] .faq-toggle { border-color: var(--cyan); color: var(--cyan); transform: rotate(45deg); }
+    .faq-item:hover .faq-toggle { border-color: var(--brass); color: var(--brass); }
+    .faq-a {
+      grid-column: 2 / 3; color: var(--dim); font-size: 16px;
+      max-width: 64ch; margin-top: 16px; line-height: 1.6;
+    }
+
+    /* -------- CONTACT -------- */
+    .contact-grid {
+      display: grid; grid-template-columns: 5fr 7fr;
+      gap: clamp(32px, 5vw, 80px); align-items: stretch;
+    }
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+    .contact-copy h2 {
+      font-family: "Fraunces", serif; font-variation-settings: "opsz" 144, "SOFT" 40;
+      font-size: clamp(40px, 5.2vw, 76px); line-height: 0.95;
+      letter-spacing: -0.03em; margin-bottom: 32px;
+    }
+    .contact-copy h2 em { font-style: italic; color: var(--brass); font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1; }
+
+    .info-row {
+      display: grid; grid-template-columns: 140px 1fr; gap: 16px;
+      padding: 20px 0; border-top: 1px solid var(--line);
+      align-items: start;
+    }
+    .info-row:last-child { border-bottom: 1px solid var(--line); }
+    .info-row dt { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dim); padding-top: 6px; }
+    .info-row dd { font-size: 16px; color: var(--paper); }
+    .info-row a { color: var(--paper); border-bottom: 1px solid var(--line); transition: border-color .3s, color .3s; padding-bottom: 2px; }
+    .info-row a:hover { color: var(--cyan); border-color: var(--cyan); }
+
+    /* Form */
+    .form-card {
+      background: linear-gradient(160deg, rgba(23,29,48,0.85), rgba(15,20,36,0.85));
+      border: 1px solid var(--line); padding: clamp(28px, 4vw, 48px);
+      position: relative;
+    }
+    .form-card .corner { position: absolute; width: 14px; height: 14px; border: 1px solid var(--brass); }
+    .form-card .c1 { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+    .form-card .c2 { top: -1px; right: -1px; border-left: 0; border-bottom: 0; }
+    .form-card .c3 { bottom: -1px; left: -1px; border-right: 0; border-top: 0; }
+    .form-card .c4 { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
+
+    .form-card h3 {
+      font-family: "Fraunces", serif; font-variation-settings: "opsz" 144, "SOFT" 50;
+      font-size: clamp(28px, 3vw, 40px); line-height: 1.05; letter-spacing: -0.02em;
+      margin-bottom: 28px;
+    }
+    .form-card h3 em { font-style: italic; color: var(--brass); font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1; }
+
+    .field { position: relative; margin-bottom: 22px; }
+    .field label {
+      position: absolute; left: 0; top: 16px; pointer-events: none;
+      font-family: "JetBrains Mono", monospace; font-size: 11px;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--dim);
+      transition: transform .25s, color .25s, font-size .25s;
+    }
+    .field input, .field textarea {
+      width: 100%; background: transparent; border: 0;
+      border-bottom: 1px solid var(--line);
+      padding: 16px 0 12px;
+      font-family: "Instrument Sans", sans-serif;
+      font-size: 16px; color: var(--paper);
+      transition: border-color .3s;
+    }
+    .field input:focus, .field textarea:focus {
+      outline: none; border-color: var(--cyan);
+    }
+    .field input:focus + label, .field textarea:focus + label,
+    .field input:not(:placeholder-shown) + label, .field textarea:not(:placeholder-shown) + label {
+      transform: translateY(-22px); color: var(--cyan); font-size: 10px;
+    }
+    .field textarea { resize: vertical; min-height: 100px; }
+
+    .form-foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 12px; flex-wrap: wrap; }
+    .form-foot small { color: var(--dim); font-family: "JetBrains Mono", monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; }
+
+    .map {
+      margin-top: clamp(60px, 8vw, 100px); position: relative;
+      border: 1px solid var(--line); padding: 12px;
+      background: var(--ink-3);
+    }
+    .map iframe { width: 100%; height: clamp(360px, 50vw, 520px); filter: grayscale(.85) contrast(1.1) invert(.92) hue-rotate(180deg); }
+    .map-label {
+      position: absolute; top: 24px; left: 24px; z-index: 2;
+      background: var(--ink); padding: 10px 14px; border: 1px solid var(--brass);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .map-label .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 0 4px rgba(91,227,227,.2); animation: pulse 2s ease-in-out infinite; }
+    .map-label .mono { color: var(--paper); }
+
+    /* -------- Footer -------- */
+    footer.site {
+      padding: clamp(60px, 8vw, 100px) 0 40px;
+      border-top: 1px solid var(--line);
+      background: var(--ink-2);
+    }
+    .foot-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px; align-items: start;
+    }
+    @media (max-width: 820px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+    .foot-brand .huge {
+      font-family: "Fraunces", serif; font-style: italic;
+      font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+      font-size: clamp(54px, 8vw, 96px); line-height: 0.9;
+      letter-spacing: -0.04em; color: var(--paper);
+    }
+    .foot-brand p { color: var(--dim); font-size: 14.5px; max-width: 32ch; margin-top: 16px; }
+    .foot-col h5 { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass); margin-bottom: 20px; }
+    .foot-col ul { list-style: none; display: grid; gap: 10px; }
+    .foot-col a { color: var(--paper); opacity: .85; transition: opacity .25s, color .25s; }
+    .foot-col a:hover { opacity: 1; color: var(--cyan); }
+    .foot-bottom {
+      margin-top: clamp(40px, 6vw, 80px); padding-top: 28px;
+      border-top: 1px solid var(--line);
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      font-family: "JetBrains Mono", monospace; font-size: 11px;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--dim);
+      flex-wrap: wrap;
+    }
+
+    /* Sticky mobile CTA */
+    .sticky-cta {
+      display: none; position: fixed; left: 12px; right: 12px; bottom: 12px;
+      z-index: 50; background: var(--ink); border: 1px solid var(--line);
+      border-radius: 999px; padding: 6px;
+      box-shadow: 0 14px 40px -12px rgba(0,0,0,.6);
+    }
+    .sticky-cta a {
+      flex: 1; text-align: center; padding: 12px;
+      font-family: "JetBrains Mono", monospace; font-size: 11px;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      border-radius: 999px;
+    }
+    .sticky-cta .call { background: var(--cyan); color: var(--ink); }
+    .sticky-cta .wa { color: var(--paper); }
+    .sticky-cta .en { color: var(--brass); }
+    @media (max-width: 767px) { .sticky-cta { display: flex; } body { padding-bottom: 80px; } }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(32px); transition: opacity .9s ease-out, transform .9s cubic-bezier(.2,.8,.2,1); }
+    .reveal.in { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
 </head>
 
 <body>
-  <div id="preloader"></div>
 
-  <script>
-    document.querySelector('body').addEventListener('click',function() {
-      var popup = document.querySelector('.popup-container');
-      if (popup) popup.style.display = 'none';
-    });
-  </script>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="blueprint-grid" aria-hidden="true"></div>
 
-  <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:hydromark.india@gmail.com">hydromark.india@gmail.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><a href="tel:+919790458993">+91 97904 58993</a></i>
-      </div>
+  <!-- Rolling ribbon -->
+  <div class="ribbon" aria-hidden="true">
+    <div class="ribbon-track">
+      <span><b>◆ EST. Coimbatore</b></span><span>Garden hoses</span><span>PVC Suction</span><span>Braided</span><span>Hydraulic</span><span>Irrigation</span><span>Fittings &amp; Reels</span><span><b>Wholesale · Retail</b></span><span>Same-day dispatch</span>
+      <span><b>◆ EST. Coimbatore</b></span><span>Garden hoses</span><span>PVC Suction</span><span>Braided</span><span>Hydraulic</span><span>Irrigation</span><span>Fittings &amp; Reels</span><span><b>Wholesale · Retail</b></span><span>Same-day dispatch</span>
     </div>
-  </section><!-- End Top Bar-->
+  </div>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-between">
-
-      <div id="logo">
-        <a href="index.html" aria-label="Hydromark home"><img src="./assets/img/HYDROMARK.svg" alt="Hydromark — hoses & pipes, Coimbatore"></a>
-      </div>
-
-      <nav id="navbar" class="navbar">
+  <!-- Header -->
+  <header class="site">
+    <div class="nav">
+      <a class="mark" href="#top" aria-label="Hydromark home">
+        <span class="mark-dot"></span>
+        Hydromark<sup style="font-size:10px; color:var(--brass); font-style:normal; font-family:'JetBrains Mono',monospace; letter-spacing:.1em; margin-left:6px;">™</sup>
+      </a>
+      <nav class="primary" aria-label="Primary">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#manifesto">Manifesto</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+      </nav>
+      <a class="nav-cta" href="https://wa.me/919790458993" rel="noopener" target="_blank">
+        <span class="dot"></span> Quote on WhatsApp
+      </a>
     </div>
-  </header><!-- End Header -->
+  </header>
 
-  <main id="main">
+  <main id="top">
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero">
-      <div class="container" data-aos="fade-up">
-        <div class="hero-inner">
-          <h1>Garden, PVC &amp; Hydraulic Hoses in Coimbatore</h1>
-          <p class="lead">Premium hoses, fittings and irrigation supplies — wholesale &amp; retail, with same-day dispatch across Tamil Nadu.</p>
-          <div class="hero-ctas">
-            <a class="btn-hm btn-hm-primary" href="https://wa.me/919790458993?text=Hi%20Hydromark%2C%20I%20need%20a%20quote." rel="noopener" target="_blank">Get a Quote on WhatsApp</a>
-            <a class="btn-hm btn-hm-secondary" href="tel:+919790458993">Call +91 97904 58993</a>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="caustic" aria-hidden="true">
+        <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <filter id="blurme">
+              <feGaussianBlur stdDeviation="38"/>
+            </filter>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#5BE3E3" stop-opacity="0.35"/>
+              <stop offset="1" stop-color="#C9A557" stop-opacity="0.20"/>
+            </linearGradient>
+          </defs>
+          <g filter="url(#blurme)">
+            <path d="M -50 520 Q 200 380 420 520 T 900 500 T 1300 480 L 1300 900 L -50 900 Z" fill="url(#g1)">
+              <animate attributeName="d" dur="16s" repeatCount="indefinite"
+                values="M -50 520 Q 200 380 420 520 T 900 500 T 1300 480 L 1300 900 L -50 900 Z;
+                        M -50 560 Q 220 420 440 500 T 920 540 T 1300 500 L 1300 900 L -50 900 Z;
+                        M -50 520 Q 200 380 420 520 T 900 500 T 1300 480 L 1300 900 L -50 900 Z"/>
+            </path>
+          </g>
+          <g stroke="#5BE3E3" stroke-opacity=".15" fill="none" stroke-width="1">
+            <path d="M 0 680 C 300 600 600 760 900 660 S 1400 700 1400 700">
+              <animate attributeName="d" dur="12s" repeatCount="indefinite"
+                values="M 0 680 C 300 600 600 760 900 660 S 1400 700 1400 700;
+                        M 0 700 C 300 640 600 740 900 680 S 1400 680 1400 700;
+                        M 0 680 C 300 600 600 760 900 660 S 1400 700 1400 700"/>
+            </path>
+          </g>
+        </svg>
+      </div>
+
+      <div class="hero-rail" aria-hidden="true">
+        <span><b>11.0035° N</b> · 76.9093° E</span>
+        <span>Coimbatore · Tamil Nadu</span>
+      </div>
+
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-label">
+              <span class="tick"></span>
+              <span class="mono">Vol. 01 · Hoses &amp; Hydraulics · 2026</span>
+            </div>
+            <h1>
+              <span class="w">The</span>
+              <span class="w italic">quiet</span>
+              <span class="w">plumbing</span>
+              <span class="w">of</span>
+              <span class="w italic">good&nbsp;gardens.</span>
+            </h1>
+            <p class="hero-sub">Garden, PVC and hydraulic hose pipes, fittings and irrigation supplies — engineered for Indian pressure, weather and soil. Wholesale and retail, dispatched the same day from Coimbatore.</p>
+            <div class="hero-ctas">
+              <a class="btn btn-primary" href="https://wa.me/919790458993?text=Hi%20Hydromark%2C%20I%20need%20a%20quote." rel="noopener" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3.5L6 12l11.5 8.5L16 18l-8-6 8-6 1.5-2.5z" transform="rotate(180 12 12)"/></svg>
+                Quote on WhatsApp
+              </a>
+              <a class="btn btn-ghost" href="tel:+919790458993">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                +91 97904 58993
+              </a>
+            </div>
           </div>
-          <ul class="hero-chips">
-            <li>Coimbatore local</li>
-            <li>Wholesale &amp; Retail</li>
-            <li>Same-day dispatch</li>
-            <li>Quality-tested</li>
-          </ul>
+
+          <aside class="hero-aside" aria-label="Highlights">
+            <div class="hero-card">
+              <span class="tick-tl"></span><span class="tick-tr"></span>
+              <div class="hc-head">
+                <span class="mono">◆ 01 · In Stock</span>
+                <span class="chip">Same-day</span>
+              </div>
+              <div class="hc-title">Pressure-tested <em>range</em></div>
+              <p class="hc-desc">½″ to 2″ diameters. Up to 20 bar working pressure. Indoor, outdoor, industrial.</p>
+              <div class="hc-foot">
+                <span class="mono">Garden · PVC · Braided · Hydraulic</span>
+                <a href="#services">See range <span class="hc-arrow">→</span></a>
+              </div>
+            </div>
+            <div class="hero-card">
+              <span class="tick-tl"></span><span class="tick-tr"></span>
+              <div class="hc-head">
+                <span class="mono">◆ 02 · Trade</span>
+                <span class="chip">Wholesale</span>
+              </div>
+              <div class="hc-title">Dealer &amp; farm <em>pricing</em></div>
+              <p class="hc-desc">Volume rates for resellers, estates and industrial buyers. Share your BOM for a quote.</p>
+              <div class="hc-foot">
+                <span class="mono">Mon–Sat · 10:00–18:00 IST</span>
+                <a href="#contact">Send BOM <span class="hc-arrow">→</span></a>
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
-    </section><!-- End Hero Section -->
+    </section>
 
-    <!-- ======= About Section ======= -->
-    <section id="about">
-      <div class="container" data-aos="fade-up">
-        <div class="row">
-          <div class="col-lg-6 about-img">
+    <!-- Category marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Garden Hoses</span><span>PVC Suction</span><span>Braided Hoses</span><span>Hydraulic Lines</span><span>Drip &amp; Irrigation</span><span>Hose Reels</span><span>Couplings &amp; Fittings</span>
+        <span>Garden Hoses</span><span>PVC Suction</span><span>Braided Hoses</span><span>Hydraulic Lines</span><span>Drip &amp; Irrigation</span><span>Hose Reels</span><span>Couplings &amp; Fittings</span>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="bounded">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">§ 01 · The House</div>
+            <h2 class="section-title">A <em>quiet</em> specialist for loud problems.</h2>
+          </div>
+          <p class="section-meta">Since our first roll of hose, we have built a library of parts that match the pressure, soil and sun of the south.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-visual reveal">
             <img src="assets/img/img2.jpg" alt="Hydromark hose collection on display, Coimbatore" loading="lazy">
+            <div class="overlay"></div>
+            <div class="caption">
+              <span class="display-italic" style="font-size:22px;">Thondamuthur Rd · Coimbatore</span>
+              <span class="mono">N 11.003° · E 76.909°</span>
+            </div>
           </div>
 
-          <div class="col-lg-6 content">
-            <h2>Your Trusted Partner for Expert Gardening and Quality Hoses</h2>
-            <ul>
-              <li><i class="bi bi-check-circle"></i><b>Premium Quality, Lasting Performance:</b> A meticulously curated selection of high-standard hoses built to resist kinks, twists and weather extremes — a reliable companion for home, farm and industrial use.</li>
-              <li><i class="bi bi-check-circle"></i><b>Innovative Features for Effortless Use:</b> Hoses and fittings engineered for convenience, with pressure ratings suited to Indian conditions.</li>
-              <li><i class="bi bi-check-circle"></i><b>Expert Guidance and Unparalleled Customer Care:</b> More than a supplier — we help you pick the right hose, size and fittings for the job.</li>
-            </ul>
+          <div class="about-prose reveal">
+            <h2>Built for <em>kinks, twists</em> &amp; weather that doesn't forgive.</h2>
+            <p>Hydromark curates a tight catalogue of garden, PVC, braided and hydraulic hoses — each one chosen for real conditions, not showroom brochures. We know what leaks first in July and what cracks first in December, and we stock around both.</p>
+            <p>Call us for advice, walk in for supply. We ship the same day across Tamil Nadu, and we will tell you if a cheaper part is the right part.</p>
+            <dl class="specs">
+              <div><div class="num">½″–<em>2″</em></div><div class="lbl">Diameters</div></div>
+              <div><div class="num">20<em>bar</em></div><div class="lbl">Working pressure</div></div>
+              <div><div class="num">Same<em>day</em></div><div class="lbl">Dispatch</div></div>
+            </dl>
           </div>
         </div>
       </div>
-    </section><!-- End About Section -->
+    </section>
 
-    <!-- ======= Services Section ======= -->
-    <section id="services">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Services</h2>
+    <!-- ============ SERVICES ============ -->
+    <section id="services" class="bounded">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">§ 02 · How we work</div>
+            <h2 class="section-title">Four <em>services</em>, one phone call.</h2>
+          </div>
+          <p class="section-meta">No portal, no tickets, no form fatigue. The shortest path from problem to part.</p>
         </div>
 
-        <div class="row gy-4">
+        <div class="svc-grid">
+          <article class="svc s1 reveal">
+            <span class="idx">◆ 01 · Logistics</span>
+            <h3>Speedy <em>satisfaction</em>.</h3>
+            <p>An efficient dispatch network sends your order out on the same day wherever possible, so you start using the part before the week turns.</p>
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7zM7 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm10 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
+            </span>
+          </article>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="box">
-              <div class="icon"><i class="bi bi-truck"></i></div>
-              <h4 class="title">Speedy Satisfaction</h4>
-              <p class="description">Our efficient logistics network ensures that your order is processed promptly, so you can start enjoying your purchases without delay.</p>
-            </div>
-          </div>
+          <article class="svc s2 reveal">
+            <span class="idx">◆ 02 · Availability</span>
+            <h3>Flexibility at your <em>fingertips</em>.</h3>
+            <p>WhatsApp us anytime — we reply during business hours, the same day.</p>
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+          </article>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="box">
-              <div class="icon"><i class="bi bi-clock-fill"></i></div>
-              <h4 class="title">Flexibility at Your Fingertips</h4>
-              <p class="description">Say goodbye to time constraints — reach out on WhatsApp any time and we will respond during business hours.</p>
-            </div>
-          </div>
+          <article class="svc s3 reveal">
+            <span class="idx">◆ 03 · Range</span>
+            <h3>Collections <em>curated</em>.</h3>
+            <p>Garden, PVC, braided and hydraulic — tight catalogue, deep stock, real specs.</p>
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+            </span>
+          </article>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="box">
-              <div class="icon"><i class="bi bi-list-check"></i></div>
-              <h4 class="title">Collections</h4>
-              <p class="description">Explore an extensive selection of garden, PVC, braided and hydraulic hoses designed to cater to every need.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="box">
-              <div class="icon"><i class="bi bi-hourglass-split"></i></div>
-              <h4 class="title">Instant Gratification</h4>
-              <p class="description">Need to place an urgent order? Call or WhatsApp us and we will arrange same-day dispatch across Coimbatore.</p>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Why Hydromark strip -->
-        <div class="row gy-3 why-strip" data-aos="fade-up">
-          <div class="col-6 col-md-3"><i class="bi bi-geo-alt-fill"></i><h5>Coimbatore local</h5></div>
-          <div class="col-6 col-md-3"><i class="bi bi-lightning-charge-fill"></i><h5>Same-day dispatch</h5></div>
-          <div class="col-6 col-md-3"><i class="bi bi-cash-coin"></i><h5>Wholesale &amp; retail</h5></div>
-          <div class="col-6 col-md-3"><i class="bi bi-patch-check-fill"></i><h5>Quality-tested</h5></div>
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= FAQ Section ======= -->
-    <section id="faq">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Frequently Asked Questions</h2>
-        </div>
-
-        <div class="faq-list">
-          <details>
-            <summary>What types of hoses does Hydromark supply?</summary>
-            <p>Garden hoses, PVC suction hoses, braided hoses, hydraulic hoses, irrigation lines, hose reels and related fittings for home, farm and industrial use.</p>
-          </details>
-          <details>
-            <summary>Do you deliver across Tamil Nadu?</summary>
-            <p>Yes. We dispatch the same day for Coimbatore and surrounding areas, and ship across Tamil Nadu on request.</p>
-          </details>
-          <details>
-            <summary>Do you offer wholesale pricing?</summary>
-            <p>Yes. We offer wholesale pricing for dealers, farms and industrial buyers. Share your requirement on WhatsApp for a quote.</p>
-          </details>
-          <details>
-            <summary>What are your business hours?</summary>
-            <p>Monday to Saturday, 10:00 AM to 6:00 PM.</p>
-          </details>
-          <details>
-            <summary>How can I place an order?</summary>
-            <p>Call or WhatsApp us at <a href="tel:+919790458993">+91 97904 58993</a>, or send an enquiry from the contact form below.</p>
-          </details>
+          <article class="svc s4 reveal">
+            <span class="idx">◆ 04 · Turnaround</span>
+            <h3>Instant <em>gratification</em>.</h3>
+            <p>Urgent order? Call or WhatsApp and we arrange same-day dispatch across Coimbatore. For distant pincodes, next morning.</p>
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+            </span>
+          </article>
         </div>
       </div>
-    </section><!-- End FAQ Section -->
+    </section>
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Contact Us</h2>
-          <p>No matter how you choose to get in touch, we are eager to hear from you. Call, WhatsApp, email — or send a quick enquiry below.</p>
+    <!-- ============ MANIFESTO ============ -->
+    <section id="manifesto" class="manifesto">
+      <div class="wrap">
+        <div class="eyebrow reveal">§ 03 · Manifesto</div>
+        <blockquote class="reveal" style="margin-top:24px;">
+          Good water needs good pipes.<br>
+          Good pipes need <em>good people</em>.<br>
+          We try to be both.
+        </blockquote>
+        <div class="cite reveal">
+          <span class="line"></span>
+          <span>— The House of Hydromark</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="bounded">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">§ 04 · Questions</div>
+            <h2 class="section-title">Ask us <em>anything</em>.</h2>
+          </div>
+          <p class="section-meta">Five common questions, five honest answers. For the rest, WhatsApp us.</p>
         </div>
 
-        <div class="row contact-info">
-
-          <div class="col-md-4">
-            <div class="contact-address">
-              <i class="bi bi-geo-alt"></i>
-              <h3>Address</h3>
-              <address>S.F 51, Thondamuthur Rd, Chandrakala Nagar, Nagaraja Puram, Veerakeralam, Coimbatore, Tamil Nadu 641007</address>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="contact-phone">
-              <i class="bi bi-phone"></i>
-              <h3>Phone Number</h3>
-              <p><a href="tel:+919790458993">+91 97904 58993</a></p>
-              <p><a href="https://wa.me/919790458993" rel="noopener" target="_blank">WhatsApp us</a></p>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="contact-email">
-              <i class="bi bi-envelope"></i>
-              <h3>Email</h3>
-              <p><a href="mailto:hydromark.india@gmail.com">hydromark.india@gmail.com</a></p>
-              <p><small>Hours: Mon–Sat, 10:00–18:00</small></p>
-            </div>
-          </div>
-
+        <div class="faq-list reveal">
+          <details class="faq-item">
+            <summary>
+              <span class="faq-num">01</span>
+              <span class="faq-q">What types of hoses do you supply?</span>
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-a">Garden hoses, PVC suction hoses, braided hoses, hydraulic hoses, irrigation lines, hose reels and related fittings — for home, farm and industrial use.</div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <span class="faq-num">02</span>
+              <span class="faq-q">Do you deliver across Tamil Nadu?</span>
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-a">Yes. Same-day dispatch for Coimbatore and surrounding areas; shipping across Tamil Nadu on request.</div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <span class="faq-num">03</span>
+              <span class="faq-q">Do you offer wholesale pricing?</span>
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-a">Yes — volume pricing for dealers, farms and industrial buyers. Send your requirement on WhatsApp for a quote.</div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <span class="faq-num">04</span>
+              <span class="faq-q">What are your business hours?</span>
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-a">Monday to Saturday, 10:00 AM to 6:00 PM. Sundays closed.</div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <span class="faq-num">05</span>
+              <span class="faq-q">How can I place an order?</span>
+              <span class="faq-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-a">Call or WhatsApp us at <a href="tel:+919790458993" style="color:var(--cyan); border-bottom:1px solid var(--cyan);">+91 97904 58993</a>, or send an enquiry from the form below.</div>
+          </details>
         </div>
+      </div>
+    </section>
 
-        <!-- Enquiry form (mailto fallback, no backend) -->
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-7">
-            <form id="enquiryForm" class="enquiry-form" action="mailto:hydromark.india@gmail.com" method="post" enctype="text/plain">
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label for="ef-name" class="form-label">Your Name</label>
-                  <input type="text" class="form-control" id="ef-name" name="Name" required>
-                </div>
-                <div class="col-md-6">
-                  <label for="ef-phone" class="form-label">Phone</label>
-                  <input type="tel" class="form-control" id="ef-phone" name="Phone" required>
-                </div>
-                <div class="col-12">
-                  <label for="ef-product" class="form-label">Product / Requirement</label>
-                  <input type="text" class="form-control" id="ef-product" name="Product" placeholder="e.g. ½-inch garden hose, 20 m">
-                </div>
-                <div class="col-12">
-                  <label for="ef-message" class="form-label">Message</label>
-                  <textarea class="form-control" id="ef-message" name="Message" rows="4" required></textarea>
-                </div>
-                <div class="col-12">
-                  <button type="submit" class="btn-hm btn-hm-primary">Send Enquiry</button>
-                  <small class="form-note">Opens your email client to send the message.</small>
-                </div>
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="bounded" style="background:linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%); border-top: 1px solid var(--line);">
+      <div class="wrap">
+        <div class="contact-grid">
+          <div class="contact-copy reveal">
+            <div class="eyebrow">§ 05 · Reach us</div>
+            <h2 style="margin-top:16px;">Call. WhatsApp. Or <em>write a line</em>.</h2>
+            <dl>
+              <div class="info-row"><dt>Address</dt><dd><address>S.F 51, Thondamuthur Rd,<br>Chandrakala Nagar, Veerakeralam,<br>Coimbatore, Tamil Nadu 641007</address></dd></div>
+              <div class="info-row"><dt>Phone</dt><dd><a href="tel:+919790458993">+91 97904 58993</a></dd></div>
+              <div class="info-row"><dt>WhatsApp</dt><dd><a href="https://wa.me/919790458993" rel="noopener" target="_blank">wa.me/919790458993</a></dd></div>
+              <div class="info-row"><dt>Email</dt><dd><a href="mailto:hydromark.india@gmail.com">hydromark.india@gmail.com</a></dd></div>
+              <div class="info-row"><dt>Hours</dt><dd>Mon–Sat · 10:00–18:00 IST</dd></div>
+            </dl>
+          </div>
+
+          <div class="form-card reveal">
+            <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+            <div class="eyebrow">Enquiry</div>
+            <h3 style="margin-top:10px;">Tell us what you <em>need</em>.</h3>
+            <form action="mailto:hydromark.india@gmail.com" method="post" enctype="text/plain">
+              <div class="field"><input type="text" id="f-name" name="Name" placeholder=" " required><label for="f-name">Your name</label></div>
+              <div class="field"><input type="tel" id="f-phone" name="Phone" placeholder=" " required><label for="f-phone">Phone</label></div>
+              <div class="field"><input type="text" id="f-product" name="Product" placeholder=" "><label for="f-product">Product / requirement</label></div>
+              <div class="field"><textarea id="f-msg" name="Message" placeholder=" " required rows="4"></textarea><label for="f-msg">Message</label></div>
+              <div class="form-foot">
+                <button type="submit" class="btn btn-primary">
+                  Send enquiry
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </button>
+                <small>◆ Opens your mail client</small>
               </div>
             </form>
           </div>
-          <div class="col-lg-5">
-            <div class="quick-actions">
-              <a class="btn-hm btn-hm-secondary w-100 mb-3" href="https://wa.me/919790458993?text=Hi%20Hydromark%2C%20I%20need%20a%20quote." rel="noopener" target="_blank"><i class="bi bi-whatsapp"></i> Chat on WhatsApp</a>
-              <a class="btn-hm btn-hm-primary w-100" href="tel:+919790458993"><i class="bi bi-telephone"></i> Call Now</a>
-            </div>
-          </div>
+        </div>
+
+        <div class="map reveal">
+          <div class="map-label"><span class="dot"></span><span class="mono">Hydromark · Thondamuthur Rd</span></div>
+          <iframe title="Hydromark location on Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1164.3727846364377!2d76.90925739411149!3d11.003500430598315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85f899e9a0815%3A0xd174726e35f70aa6!2sDHANA%20PIPE%20CORPORATION!5e0!3m2!1sen!2sin!4v1692433523327!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
+    </section>
 
-      <div class="container mb-4">
-        <iframe title="Hydromark location on Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1164.3727846364377!2d76.90925739411149!3d11.003500430598315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85f899e9a0815%3A0xd174726e35f70aa6!2sDHANA%20PIPE%20CORPORATION!5e0!3m2!1sen!2sin!4v1692433523327!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </section><!-- End Contact Section -->
+  </main>
 
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="row gy-3">
-        <div class="col-md-5">
-          <h5>Hydromark</h5>
-          <p>Garden, PVC &amp; hydraulic hose pipes, fittings and irrigation supplies. Wholesale &amp; retail in Coimbatore, Tamil Nadu.</p>
-          <address>S.F 51, Thondamuthur Rd, Veerakeralam, Coimbatore 641007</address>
+  <!-- Footer -->
+  <footer class="site">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <div class="huge">Hydromark.</div>
+          <p>The quiet plumbing of good gardens — garden, PVC and hydraulic hose pipes, fittings and irrigation supplies from Coimbatore.</p>
         </div>
-        <div class="col-6 col-md-3">
-          <h5>Quick Links</h5>
-          <ul class="footer-links">
+        <div class="foot-col">
+          <h5>Site</h5>
+          <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="termsncondition.html">Terms &amp; Conditions</a></li>
           </ul>
         </div>
-        <div class="col-6 col-md-4">
-          <h5>Reach Us</h5>
-          <ul class="footer-links">
+        <div class="foot-col">
+          <h5>Reach</h5>
+          <ul>
             <li><a href="tel:+919790458993">+91 97904 58993</a></li>
             <li><a href="https://wa.me/919790458993" rel="noopener" target="_blank">WhatsApp</a></li>
-            <li><a href="mailto:hydromark.india@gmail.com">hydromark.india@gmail.com</a></li>
-            <li>Mon–Sat, 10:00–18:00</li>
+            <li><a href="mailto:hydromark.india@gmail.com">Email</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="termsncondition.html">Terms &amp; Conditions</a></li>
+            <li>Mon–Sat · 10:00–18:00</li>
           </ul>
         </div>
       </div>
-      <div class="copyright text-center mt-4">
-        &copy; <span id="yr"></span> <strong>Hydromark</strong>. All Rights Reserved.
+      <div class="foot-bottom">
+        <span>© <span id="yr">2026</span> · Hydromark · All rights reserved.</span>
+        <span>Handcrafted in Coimbatore · 11.0035° N, 76.9093° E</span>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
 
-  <!-- Sticky mobile CTA -->
   <div class="sticky-cta" role="navigation" aria-label="Quick actions">
-    <a class="call" href="tel:+919790458993"><i class="bi bi-telephone"></i> Call</a>
-    <a class="wa" href="https://wa.me/919790458993" rel="noopener" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
-    <a class="en" href="#contact"><i class="bi bi-envelope"></i> Enquire</a>
+    <a class="call" href="tel:+919790458993">Call</a>
+    <a class="wa" href="https://wa.me/919790458993" rel="noopener" target="_blank">WhatsApp</a>
+    <a class="en" href="#contact">Enquire</a>
   </div>
 
-  <a href="#hero" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
   <script>
-    var loader = document.getElementById("preloader");
-    window.addEventListener("load",function(){
-      if (loader) loader.style.display='none';
+    // Dynamic year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Scroll reveal
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+    // Cursor-aware spotlight on service cards
+    document.querySelectorAll('.svc').forEach(function(card){
+      card.addEventListener('mousemove', function(e){
+        var r = card.getBoundingClientRect();
+        card.style.setProperty('--x', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--y', (e.clientY - r.top) + 'px');
+      });
     });
-    var yr = document.getElementById("yr");
-    if (yr) yr.textContent = new Date().getFullYear();
+
+    // Active nav state via scroll
+    var links = document.querySelectorAll('nav.primary a');
+    var sections = Array.from(links).map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+    var navIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) {
+          links.forEach(function(l){ l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id); });
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(function(s){ navIO.observe(s); });
   </script>
 
 </body>
