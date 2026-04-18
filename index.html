@@ -740,6 +740,97 @@
     .reveal { opacity: 0; transform: translateY(32px); transition: opacity .9s ease-out, transform .9s cubic-bezier(.2,.8,.2,1); }
     .reveal.in { opacity: 1; transform: none; }
 
+    /* ============ PRELOADER — BOY WATERING PLANTS ============ */
+    .preloader {
+      position: fixed; inset: 0; z-index: 9999;
+      background: var(--ink);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 32px;
+      transition: opacity .6s ease-out, visibility .6s;
+    }
+    .preloader.done { opacity: 0; visibility: hidden; pointer-events: none; }
+    .preloader::before {
+      content: ""; position: absolute; inset: 0;
+      background:
+        radial-gradient(60% 50% at 50% 40%, rgba(91,227,227,.08), transparent 70%),
+        radial-gradient(50% 40% at 50% 70%, rgba(201,165,87,.06), transparent 70%);
+      pointer-events: none;
+    }
+    .pl-scene { position: relative; width: 280px; height: 220px; z-index: 1; }
+    .pl-scene svg { width: 100%; height: 100%; overflow: visible; }
+
+    /* Boy sways gently */
+    .pl-boy { transform-origin: 90px 180px; animation: boy-sway 2.4s ease-in-out infinite; }
+    @keyframes boy-sway {
+      0%, 100% { transform: rotate(-1.5deg); }
+      50%      { transform: rotate(1.5deg); }
+    }
+
+    /* Arm tilts the can */
+    .pl-arm { transform-origin: 110px 120px; animation: arm-tilt 2.4s ease-in-out infinite; }
+    @keyframes arm-tilt {
+      0%, 100% { transform: rotate(0deg); }
+      50%      { transform: rotate(-4deg); }
+    }
+
+    /* Water stream + droplets */
+    .pl-drop { opacity: 0; animation: drop 1.2s ease-in infinite; }
+    .pl-drop.d2 { animation-delay: .3s; }
+    .pl-drop.d3 { animation-delay: .6s; }
+    .pl-drop.d4 { animation-delay: .9s; }
+    @keyframes drop {
+      0%   { transform: translateY(0) scale(1);   opacity: 0; }
+      20%  { opacity: 1; }
+      80%  { opacity: 1; }
+      100% { transform: translateY(38px) scale(0.6); opacity: 0; }
+    }
+
+    /* Plant grows */
+    .pl-plant { transform-origin: 205px 190px; animation: grow 3.6s ease-in-out infinite; }
+    @keyframes grow {
+      0%, 100% { transform: scaleY(0.85); }
+      50%      { transform: scaleY(1.05); }
+    }
+
+    /* Loading text */
+    .pl-text {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase;
+      color: var(--dim); z-index: 1;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .pl-text .word { color: var(--paper); }
+    .pl-text .dots { display: inline-flex; gap: 4px; }
+    .pl-text .dots span {
+      width: 4px; height: 4px; border-radius: 50%; background: var(--cyan);
+      animation: blink 1.2s ease-in-out infinite;
+    }
+    .pl-text .dots span:nth-child(2) { animation-delay: .2s; }
+    .pl-text .dots span:nth-child(3) { animation-delay: .4s; }
+    @keyframes blink {
+      0%, 100% { opacity: .25; transform: scale(0.8); }
+      50%      { opacity: 1;   transform: scale(1.2); }
+    }
+
+    /* Brand signature */
+    .pl-brand {
+      position: absolute; bottom: 36px;
+      font-family: "Fraunces", serif; font-style: italic;
+      font-variation-settings: "opsz" 144, "SOFT" 100;
+      font-size: 18px; color: var(--dim); z-index: 1;
+    }
+    .pl-brand b { color: var(--paper); font-weight: 400; }
+
+    @media (max-width: 480px) {
+      .pl-scene { width: 220px; height: 175px; }
+      .pl-text { font-size: 10px; letter-spacing: 0.24em; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .pl-boy, .pl-arm, .pl-plant, .pl-drop, .pl-text .dots span { animation: none; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
     }
@@ -867,6 +958,99 @@
 </head>
 
 <body>
+
+  <!-- Preloader: boy watering plants -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="pl-scene">
+      <svg viewBox="0 0 280 220" xmlns="http://www.w3.org/2000/svg" fill="none"
+           stroke="#F4F1EA" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Ground line -->
+        <line x1="10" y1="200" x2="270" y2="200" stroke="#2A2F42" stroke-width="1"/>
+        <line x1="20" y1="205" x2="60" y2="205" stroke="#2A2F42" stroke-width="1"/>
+        <line x1="160" y1="205" x2="210" y2="205" stroke="#2A2F42" stroke-width="1"/>
+
+        <!-- Boy (swaying) -->
+        <g class="pl-boy">
+          <!-- Head -->
+          <circle cx="90" cy="90" r="14"/>
+          <!-- Hair tuft -->
+          <path d="M78 85 Q85 76 92 82 Q98 74 104 84" stroke="#C9A557"/>
+          <!-- Eyes -->
+          <circle cx="85" cy="90" r="0.9" fill="#F4F1EA" stroke="none"/>
+          <circle cx="94" cy="90" r="0.9" fill="#F4F1EA" stroke="none"/>
+          <!-- Smile -->
+          <path d="M85 96 Q90 99 95 96" stroke-width="1.2"/>
+          <!-- Neck -->
+          <line x1="90" y1="104" x2="90" y2="112"/>
+          <!-- T-shirt -->
+          <path d="M74 118 L78 114 L90 112 L102 114 L106 118 L108 148 L72 148 Z" stroke="#5BE3E3"/>
+          <!-- Belt -->
+          <line x1="74" y1="148" x2="106" y2="148" stroke="#C9A557" stroke-width="2"/>
+          <!-- Shorts -->
+          <path d="M74 148 L75 170 L87 170 L90 152 L93 170 L105 170 L106 148 Z"/>
+          <!-- Legs -->
+          <line x1="81" y1="170" x2="79" y2="190"/>
+          <line x1="99" y1="170" x2="101" y2="190"/>
+          <!-- Shoes -->
+          <path d="M72 190 L88 190 L88 195 L74 195 Z" stroke="#C9A557"/>
+          <path d="M94 190 L110 190 L108 195 L94 195 Z" stroke="#C9A557"/>
+          <!-- Left arm (resting) -->
+          <path d="M76 120 L68 140 L72 148" />
+          <!-- Right arm holding can (tilting) -->
+          <g class="pl-arm">
+            <path d="M104 120 L130 118 L138 124"/>
+          </g>
+        </g>
+
+        <!-- Watering can (brass) -->
+        <g stroke="#C9A557" stroke-width="1.6">
+          <!-- Body -->
+          <path d="M140 118 L168 118 L172 140 L138 140 Z" fill="rgba(201,165,87,0.08)"/>
+          <!-- Handle -->
+          <path d="M152 118 Q156 106 166 112"/>
+          <!-- Spout -->
+          <path d="M140 124 L180 116 L190 122 L188 126 L180 122 L142 132 Z" fill="rgba(201,165,87,0.08)"/>
+          <!-- Spout tip -->
+          <line x1="188" y1="120" x2="196" y2="119"/>
+          <line x1="188" y1="124" x2="196" y2="125"/>
+        </g>
+
+        <!-- Water droplets -->
+        <g fill="#5BE3E3" stroke="none">
+          <path class="pl-drop"    d="M200 130 q-2 4 0 6 q2 -2 0 -6 z"/>
+          <path class="pl-drop d2" d="M204 132 q-2 4 0 6 q2 -2 0 -6 z"/>
+          <path class="pl-drop d3" d="M198 134 q-2 4 0 6 q2 -2 0 -6 z"/>
+          <path class="pl-drop d4" d="M202 136 q-2 4 0 6 q2 -2 0 -6 z"/>
+        </g>
+
+        <!-- Plant pot + plant (growing) -->
+        <g>
+          <!-- Pot -->
+          <path d="M188 180 L222 180 L218 200 L192 200 Z"
+                stroke="#C9A557" fill="rgba(201,165,87,0.08)"/>
+          <line x1="188" y1="184" x2="222" y2="184" stroke="#C9A557"/>
+        </g>
+        <g class="pl-plant">
+          <!-- Stem -->
+          <path d="M205 180 Q204 160 207 148" stroke="#5BE3E3"/>
+          <!-- Leaves -->
+          <path d="M207 170 Q216 168 218 160 Q212 160 207 168" stroke="#5BE3E3" fill="rgba(91,227,227,0.12)"/>
+          <path d="M205 162 Q194 158 192 150 Q200 150 205 160" stroke="#5BE3E3" fill="rgba(91,227,227,0.12)"/>
+          <path d="M207 152 Q214 148 215 142 Q210 142 207 150" stroke="#5BE3E3" fill="rgba(91,227,227,0.12)"/>
+          <!-- Top bud -->
+          <circle cx="207" cy="147" r="2" fill="#C9A557" stroke="none"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="pl-text">
+      <span>Growing</span>
+      <span class="word">Hydromark</span>
+      <span class="dots"><span></span><span></span><span></span></span>
+    </div>
+
+    <div class="pl-brand"><b>Hydromark.</b> &nbsp;Coimbatore</div>
+  </div>
 
   <div class="grain" aria-hidden="true"></div>
   <div class="blueprint-grid" aria-hidden="true"></div>
@@ -1257,6 +1441,25 @@
   </div>
 
   <script>
+    // Preloader — hide once page + fonts are ready; 2.2s min so animation is visible
+    (function(){
+      var pre = document.getElementById('preloader');
+      if (!pre) return;
+      var t0 = Date.now();
+      function hide(){
+        var elapsed = Date.now() - t0;
+        var wait = Math.max(0, 1800 - elapsed);
+        setTimeout(function(){
+          pre.classList.add('done');
+          setTimeout(function(){ pre.remove(); }, 700);
+        }, wait);
+      }
+      if (document.readyState === 'complete') hide();
+      else window.addEventListener('load', hide);
+      // Safety: never let it block page for more than 6s
+      setTimeout(function(){ if (pre && !pre.classList.contains('done')) { pre.classList.add('done'); setTimeout(function(){ pre.remove(); }, 700); } }, 6000);
+    })();
+
     // Dynamic year
     document.getElementById('yr').textContent = new Date().getFullYear();
 
