@@ -22,17 +22,22 @@
   <meta property="og:url" content="https://hydromark.in/">
   <meta property="og:title" content="Hydromark — Garden Hoses &amp; Irrigation · Coimbatore">
   <meta property="og:description" content="Premium garden hoses, PVC &amp; braided pipes, hose reels and irrigation supplies. Wholesale &amp; retail from Coimbatore, Tamil Nadu.">
-  <meta property="og:image" content="https://hydromark.in/assets/img/HYDROMARK.svg">
+  <meta property="og:image" content="https://hydromark.in/assets/img/og-cover.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Hydromark — Garden Hoses &amp; Irrigation, Coimbatore">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Hydromark — Garden Hoses &amp; Irrigation · Coimbatore">
   <meta name="twitter:description" content="Garden hoses, PVC pipes, hose reels &amp; irrigation supplies. Same-day dispatch from Coimbatore.">
-  <meta name="twitter:image" content="https://hydromark.in/assets/img/HYDROMARK.svg">
+  <meta name="twitter:image" content="https://hydromark.in/assets/img/og-cover.jpg">
 
   <!-- Favicons -->
-  <link rel="icon" href="./assets/img/HYDROMARK.svg">
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="./assets/img/HYDROMARK.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
 
   <!-- Fonts: Fraunces (display, variable Opsz) + Instrument Sans (body) + JetBrains Mono (mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,11 +51,21 @@
     "@type": "HardwareStore",
     "@id": "https://hydromark.in/#business",
     "name": "Hydromark",
-    "image": "https://hydromark.in/assets/img/HYDROMARK.svg",
+    "alternateName": ["Dhana Pipe Corporation", "Hydromark Hoses"],
+    "legalName": "Dhana Pipe Corporation",
+    "description": "Hydromark is a Coimbatore-based supplier of garden hoses, PVC and braided hose pipes, hose reels, couplings, fittings and drip & irrigation supplies, serving home and farm buyers across Tamil Nadu with wholesale and retail same-day dispatch.",
+    "slogan": "Grow nature with us.",
+    "image": [
+      "https://hydromark.in/assets/img/hydromark-logo-square.png",
+      "https://hydromark.in/assets/img/og-cover.jpg"
+    ],
+    "logo": "https://hydromark.in/assets/img/hydromark-logo-square.png",
     "url": "https://hydromark.in/",
     "telephone": "+91-97904-58993",
     "email": "hydromark.india@gmail.com",
     "priceRange": "₹₹",
+    "paymentAccepted": ["Cash", "UPI", "Bank Transfer", "Credit Card", "Debit Card"],
+    "currenciesAccepted": "INR",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "S.F 51, Thondamuthur Rd, Chandrakala Nagar, Nagaraja Puram, Veerakeralam",
@@ -65,7 +80,25 @@
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
       "opens": "10:00", "closes": "18:00"
     }],
-    "areaServed": ["Coimbatore","Tiruppur","Pollachi","Tamil Nadu"],
+    "areaServed": [
+      { "@type": "City", "name": "Coimbatore" },
+      { "@type": "City", "name": "Tiruppur" },
+      { "@type": "City", "name": "Pollachi" },
+      { "@type": "AdministrativeArea", "name": "Tamil Nadu" }
+    ],
+    "knowsAbout": ["Garden hoses", "PVC hose pipes", "Braided hoses", "Hose reels", "Drip irrigation", "Sprinkler systems", "Hose couplings and fittings", "Agricultural irrigation"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Hydromark Product Catalogue",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Garden Hose Pipes", "description": "Flexible UV-stable garden hoses in ½″, ¾″ and 1″ diameters for home and farm watering." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "PVC Suction Hoses", "description": "Reinforced PVC suction hose pipes for pumps, bore-wells and agricultural use." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Braided Hose Pipes", "description": "High-pressure braided hoses rated up to 20 bar working pressure." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Hose Reels", "description": "Wall and trolley-mounted hose reels with capacities from 15 m to 50 m." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Drip & Irrigation Systems", "description": "Drip lines, emitters and fittings for efficient farm and garden irrigation." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Couplings & Fittings", "description": "Brass and plastic couplings, clamps, nozzles and connectors." } }
+      ]
+    },
     "sameAs": []
   }
   </script>
@@ -76,8 +109,15 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Hydromark",
+    "alternateName": "Dhana Pipe Corporation",
     "url": "https://hydromark.in/",
-    "logo": "https://hydromark.in/assets/img/HYDROMARK.svg",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hydromark.in/assets/img/hydromark-logo-square.png",
+      "width": 1200,
+      "height": 1200
+    },
+    "image": "https://hydromark.in/assets/img/hydromark-logo-square.png",
     "contactPoint": [{
       "@type": "ContactPoint",
       "telephone": "+91-97904-58993",
@@ -1244,8 +1284,8 @@
 
           <div class="about-prose reveal">
             <h2>Built for <em>kinks, twists</em> &amp; weather that doesn't forgive.</h2>
-            <p>Hydromark curates a tight catalogue of garden, PVC and braided hoses with irrigation fittings — each one chosen for real conditions, not showroom brochures. We know what leaks first in July and what cracks first in December, and we stock around both.</p>
-            <p>Call us for advice, walk in for supply. We ship the same day across Tamil Nadu, and we will tell you if a cheaper part is the right part.</p>
+            <p><strong>Hydromark</strong> is a Coimbatore-based supplier of <strong>garden hoses, PVC and braided hose pipes, hose reels, couplings, fittings and drip &amp; irrigation supplies</strong>, operating under the legal entity <strong>Dhana Pipe Corporation</strong>. The store is located at S.F 51, Thondamuthur Road, Chandrakala Nagar, Veerakeralam, Coimbatore 641007, Tamil Nadu, and serves home and farm buyers across Coimbatore, Tiruppur, Pollachi and the wider Tamil Nadu region. Orders are placed on <a href="tel:+919790458993">+91 97904 58993</a> or <a href="https://wa.me/919790458993" rel="noopener" target="_blank">WhatsApp</a>, with same-day dispatch from the Coimbatore store.</p>
+            <p>We curate a tight catalogue of garden, PVC and braided hoses with irrigation fittings — each one chosen for real conditions, not showroom brochures. We know what leaks first in July and what cracks first in December, and we stock around both. Call us for advice, walk in for supply. We ship the same day across Tamil Nadu, and we will tell you if a cheaper part is the right part.</p>
             <dl class="specs">
               <div><div class="num">½″–<em>2″</em></div><div class="lbl">Diameters</div></div>
               <div><div class="num">20<em>bar</em></div><div class="lbl">Working pressure</div></div>
